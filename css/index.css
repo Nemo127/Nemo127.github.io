@@ -395,7 +395,7 @@ blockquote p {
     display: block;
     margin: 0 1.6rem;
     padding: 0.8rem 0;
-    color: #7a8288;
+    color: #222222;
     text-decoration: none;
   }
   .menus_items li a::before {
@@ -404,7 +404,7 @@ blockquote p {
     left: 0;
     bottom: 0;
     height: 4px;
-    background: #bdc1c4;
+    background: #222222;
     width: 100%;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -413,7 +413,7 @@ blockquote p {
     transform: scaleX(0);
   }
   .menus_items li a:hover {
-    color: #5c6266;
+    color: #000000;
   }
   .menus_items li a:hover::before {
     -webkit-transform: scaleX(1);
