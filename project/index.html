@@ -44,12 +44,17 @@
   .image-container {
     border: solid 4px #f0f8ff;
     overflow: hidden; /* Hide the overflow to crop the zoomed image */
-    transition: transform 0.3s; /* Add a smooth transition effect for the zoom */
   }
 
   /* Style for the image when zoomed */
+  .image-container img {
+    transform: scale(0.9); /* Set an initial scale to make it smaller */
+    transition: transform 0.5s; /* Add a longer transition time for a slower effect */
+  }
+
+  /* Style for the image when zoomed-in on hover */
   .image-container:hover img {
-    transform: scale(1.5);
+    transform: scale(1.1); /* Zoom in on hover */
   }
 </style>
 
@@ -123,23 +128,6 @@
   </div>
 </article>
 
-
-<script>
-  function toggleImageSize() {
-    const imageContainer = event.target.closest('.image-container');
-    const image = imageContainer.querySelector('img');
-
-    if (imageContainer.classList.contains('expanded')) {
-      // Currently in expanded state, restore image to initial size
-      imageContainer.classList.remove('expanded');
-      image.style.transform = 'scale(1)';
-    } else {
-      // Currently in initial state, enlarge the image
-      imageContainer.classList.add('expanded');
-      image.style.transform = 'scale(1.5)';
-    }
-  }
-</script>
 
 
 </div></main>
