@@ -27,23 +27,17 @@
 
      
 <style>
-  /* Style for the container holding the columns */
-  .columns-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  /* Style for each column */
-  .column {
-    width: 50%;
-    box-sizing: border-box;
-    padding: 10px;
-  }
+  /* Rest of the styles remain the same */
 
   /* Style for the image container */
   .image-container {
     border: solid 4px #f0f8ff;
     overflow: hidden; /* Hide the overflow to crop the zoomed image */
+  }
+
+  /* Style for the image link */
+  .image-link {
+    display: block;
   }
 
   /* Style for the image when zoomed */
@@ -76,9 +70,11 @@
         </center>
 
         <div class="image-container">
-          <center>
-            <img id="img1" src="/project/RL-OC/rloc.jpg" style="width: 400px; height: 360px;" />
-          </center>
+          <a class="image-link" href="/project/RL-OC">
+            <center>
+              <img id="img1" src="/project/RL-OC/rloc.jpg" style="width: 400px; height: 360px;" />
+            </center>
+          </a>
         </div>
       </div>
 
@@ -96,9 +92,11 @@
         </center>
 
         <div class="image-container">
-          <center>
-            <img id="img3" src="/project/formation/formation.jpg" style="width: 400px; height: 360px;" />
-          </center>
+          <a class="image-link" href="/project/formation/index.html">
+            <center>
+              <img id="img3" src="/project/formation/formation.jpg" style="width: 400px; height: 360px;" />
+            </center>
+          </a>
         </div>
       </div>
     </div>
@@ -119,14 +117,17 @@
         </center>
 
         <div class="image-container">
-          <center>
-            <img id="img2" src="/project/sideslip/bot2.jpg" style="width: 400px; height: 360px;" />
-          </center>
+          <a class="image-link" href="/project/WMR under skid and slip/skidslip.html">
+            <center>
+              <img id="img2" src="/project/sideslip/bot2.jpg" style="width: 400px; height: 360px;" />
+            </center>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </article>
+
 
 
 
