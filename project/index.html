@@ -25,84 +25,106 @@
       
 <h2 class="page-title"; style="margin-bottom: 0rem;">Project</h2>
 
-     <script>
-        function toggleImageSize() {
-            const imageContainer = document.querySelector('.image-container');
-            const image = document.querySelector('.image');
-
-            if (imageContainer.classList.contains('expanded')) {
-                // 当前已经是放大状态，将图片还原到初始大小
-                imageContainer.classList.remove('expanded');
-                image.style.transform = 'scale(1)';
-            } else {
-                // 当前是初始状态，将图片放大
-                imageContainer.classList.add('expanded');
-                image.style.transform = 'scale(1.5)';
-            }
-        }
-    </script> 
-<article>
-
-<div class="container">
-<!-- 1 -->
-<a style="text-decoration: none"; href="/project/RL-OC"><h4 style="text-align:center; margin-bottom: 0rem; margin-top: 0rem"">Approximate Optimal Tracking Control of a Car-like Vehicle - submitted to TIE</h4></a>
-<center>
-<time>
-  <font color="9f9f9c">September 14, 2022</font>
-</time>
-</center>
-  
-<a href="/project/RL-OC">
-  
+     
 <style>
-div img{
+  /* Style for the container holding each project */
+  .project-container {
+    width: 50%;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-border:solid 4px #F0F8FF;
-} 
+  /* Style for the image container */
+  .image-container {
+    border: solid 4px #f0f8ff;
+  }
 </style>
-<div onclick="toggleImageSize()">
-<center>
-<img id="img1"  src="/project/RL-OC/rloc.jpg" style="width:400px;height:360px;" >
-</center>
-</div>
-</a>
 
-  
-<!-- 2 -->
-<a style="text-decoration: none"; href="/project/WMR under skid and slip/skidslip.html"><h4 style="text-align:center; margin-bottom: 0rem; margin-top: 0rem">Fixed-time control for a wheel mobile robot - submitted to TASE</h4></a>
-<center>  
-<time>
-  <font color="9f9f9c">July 5, 2023</font>
-</time>  
- </center> 
-<a href="/project/WMR under skid and slip/skidslip.html">  
-<div onclick="toggleImageSize()">
-<center>
-<img id="img2" onclick="toggleImageSize()" src="/project/sideslip/bot2.jpg" style="width:400px;height:360px;" >
-</center>
-</div>
-</a>
+<article>
+  <div class="container">
+    <!-- Project 1 -->
+    <div class="project-container">
+      <a style="text-decoration: none" href="/project/RL-OC">
+        <h4 style="text-align: center; margin-bottom: 0; margin-top: 0">
+          Approximate Optimal Tracking Control of a Car-like Vehicle - submitted to TIE
+        </h4>
+      </a>
+      <center>
+        <time>
+          <font color="9f9f9c">September 14, 2022</font>
+        </time>
+      </center>
 
-  
-<!-- 3 -->
-<a style="text-decoration: none"; href="/project/formation/index.html"><h4 style="text-align:center; margin-bottom: 0rem; margin-top: 0rem">Fixed-time Distributed Formation of Multi-WMRs - submitted to TIMC</h4></a>
-<center>  
-<time>
-  <font color="9f9f9c">July 1, 2023</font>
-</time> 
-  </center>
-  
-<a href="/project/formation/index.html">
+      <div class="image-container" onclick="toggleImageSize()">
+        <center>
+          <img id="img1" src="/project/RL-OC/rloc.jpg" style="width: 400px; height: 360px;" />
+        </center>
+      </div>
+    </div>
 
-<div onclick="toggleImageSize()">
- <center> 
-<img id="img3"  src="/project/formation/formation.jpg" style="width:400px;height:360px;" />
- </center>
-</div>
-</a>
+    <!-- Project 2 -->
+    <div class="project-container">
+      <a style="text-decoration: none" href="/project/WMR under skid and slip/skidslip.html">
+        <h4 style="text-align: center; margin-bottom: 0; margin-top: 0">
+          Fixed-time control for a wheel mobile robot - submitted to TASE
+        </h4>
+      </a>
+      <center>
+        <time>
+          <font color="9f9f9c">July 5, 2023</font>
+        </time>
+      </center>
 
-</div>
-</article></div></main>
+      <div class="image-container" onclick="toggleImageSize()">
+        <center>
+          <img id="img2" src="/project/sideslip/bot2.jpg" style="width: 400px; height: 360px;" />
+        </center>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-container">
+      <a style="text-decoration: none" href="/project/formation/index.html">
+        <h4 style="text-align: center; margin-bottom: 0; margin-top: 0">
+          Fixed-time Distributed Formation of Multi-WMRs - submitted to TIMC
+        </h4>
+      </a>
+      <center>
+        <time>
+          <font color="9f9f9c">July 1, 2023</font>
+        </time>
+      </center>
+
+      <div class="image-container" onclick="toggleImageSize()">
+        <center>
+          <img id="img3" src="/project/formation/formation.jpg" style="width: 400px; height: 360px;" />
+        </center>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+  function toggleImageSize() {
+    const imageContainer = event.target.closest('.image-container');
+    const image = imageContainer.querySelector('img');
+
+    if (imageContainer.classList.contains('expanded')) {
+      // Currently in expanded state, restore image to initial size
+      imageContainer.classList.remove('expanded');
+      image.style.transform = 'scale(1)';
+    } else {
+      // Currently in initial state, enlarge the image
+      imageContainer.classList.add('expanded');
+      image.style.transform = 'scale(1.5)';
+    }
+  }
+</script>
+
+
+</div></main>
 
 
 
