@@ -54,24 +54,9 @@ border:solid 4px #F0F8FF;
 } 
 </style>
 <div>
-  <center>
-<img id="img1" onmouseover="bigger1()" onmouseout="smaller1()" src="/project/RL-OC/rloc.jpg" style="width:480px;height:440px;" >
-
-<script> 
-var img1 = document.getElementById('img1'); 
-
-function bigger1(){
-  img1.style.width = '520px';
-  img1.style.height = '480px';
- } 
-
-function smaller1(){
-  img1.style.width = '480px';
-  img1.style.height = '440px';
- }
-
-</script>
-    </center>
+<center>
+<img id="img1" onclick="toggleImageSize()" src="/project/RL-OC/rloc.jpg" style="width:480px;height:440px;" >
+</center>
 </a>
 
   
@@ -84,22 +69,8 @@ function smaller1(){
  </center> 
 <a href="/project/WMR under skid and slip/skidslip.html">  
 <center>
-<img id="img2" onmouseover="bigger2()" onmouseout="smaller2()" src="/project/sideslip/bot2.jpg" style="width:480px;height:440px;" >
-
-<script> 
- var img2 = document.getElementById('img2'); 
-
-function bigger2(){
-  img1.style.width = '520px';
-  img1.style.height = '480px';
- } 
-
-function smaller2(){
-  img1.style.width = '480px';
-  img1.style.height = '440px';
- } 
-</script>
-  </center>
+<img id="img2" onclick="toggleImageSize()" src="/project/sideslip/bot2.jpg" style="width:480px;height:440px;" >
+</center>
 </a>
 
   
@@ -113,28 +84,34 @@ function smaller2(){
   
 <a href="/project/formation/index.html">
  <center> 
-<img id="img3" onmouseover="bigger3()" onmouseout="smaller3()" src="/project/formation/formation.jpg" style="width:480px;height:440px;" />
-
-<script> 
-var img3 = document.getElementById('img3'); 
-
-function bigger3(){
-  img1.style.width = '520px';
-  img1.style.height = '480px';
- } 
-
-function smaller3(){
-  img1.style.width = '480px';
-  img1.style.height = '440px';
- }  
-</script>
-   </center>
+<img id="img3" onclick="toggleImageSize()" src="/project/formation/formation.jpg" style="width:480px;height:440px;" />
+ </center>
 </a>
 
 </div>
  
  
 </article></div></main>
+
+
+    <script>
+        function toggleImageSize() {
+            const imageContainer = document.querySelector('.image-container');
+            const image = document.querySelector('.image');
+
+            if (imageContainer.classList.contains('expanded')) {
+                // 当前已经是放大状态，将图片还原到初始大小
+                imageContainer.classList.remove('expanded');
+                image.style.transform = 'scale(1)';
+            } else {
+                // 当前是初始状态，将图片放大
+                imageContainer.classList.add('expanded');
+                image.style.transform = 'scale(1.5)';
+            }
+        }
+    </script>
+
+  
 
 <div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/research"> Research</a></li>
 <li class="nav_item">
