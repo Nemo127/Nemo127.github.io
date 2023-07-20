@@ -27,28 +27,29 @@
 
      
 <style>
-  /* Rest of the styles remain the same */
+  /* Style for the container holding the columns */
+  .columns-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Style for each column */
+  .column {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
 
   /* Style for the image container */
   .image-container {
     border: solid 4px #f0f8ff;
     overflow: hidden; /* Hide the overflow to crop the zoomed image */
-    width: 100%; /* Ensure the image container takes full width within the column */
-    height: 360px; /* Set a fixed height for the image container */
   }
 
-  /* Style for the image link */
-  .image-link {
-    display: block;
-  }
-
-  /* Style for the image */
+  /* Style for the image when zoomed */
   .image-container img {
-    width: 100%; /* Make the image take full width inside the container */
-    height: 100%; /* Make the image take full height inside the container */
-    object-fit: cover; /* Crop the image to fit inside the container while preserving aspect ratio */
     transform: scale(0.9); /* Set an initial scale to make it smaller */
-    transition: transform 0.3s; /* Add a transition effect for the zoom */
+    transition: transform 0.5s; /* Add a longer transition time for a slower effect */
   }
 
   /* Style for the image when zoomed-in on hover */
@@ -75,9 +76,9 @@
         </center>
 
         <div class="image-container">
-          <a class="image-link" href="/project/RL-OC">
-            <img id="img1" src="/project/RL-OC/rloc.jpg" alt="Project 1" />
-          </a>
+          <center>
+            <img id="img1" src="/project/RL-OC/rloc.jpg" style="width: 400px; height: 360px;" />
+          </center>
         </div>
       </div>
 
@@ -95,9 +96,9 @@
         </center>
 
         <div class="image-container">
-          <a class="image-link" href="/project/formation/index.html">
-            <img id="img3" src="/project/formation/formation.jpg" alt="Project 3" />
-          </a>
+          <center>
+            <img id="img3" src="/project/formation/formation.jpg" style="width: 400px; height: 360px;" />
+          </center>
         </div>
       </div>
     </div>
@@ -118,9 +119,9 @@
         </center>
 
         <div class="image-container">
-          <a class="image-link" href="/project/WMR under skid and slip/skidslip.html">
-            <img id="img2" src="/project/sideslip/bot2.jpg" alt="Project 2" />
-          </a>
+          <center>
+            <img id="img2" src="/project/sideslip/bot2.jpg" style="width: 400px; height: 360px;" />
+          </center>
         </div>
       </div>
     </div>
