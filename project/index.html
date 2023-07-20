@@ -25,41 +25,6 @@
       
 <h2 class="page-title"; style="margin-bottom: 0rem;">Project</h2>
 
-     
-<style>
-  /* Style for the container holding the columns */
-  .columns-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  /* Style for each column */
-  .column {
-    width: 50%;
-    box-sizing: border-box;
-    padding: 10px;
-  }
-
-  /* Style for the image container */
-  .image-container {
-    overflow: hidden; /* Hide the overflow to crop the zoomed image */
-  }
-
-  /* Style for the image when zoomed */
-  .image-container img {
-    transform: scale(0.95); /* Set an initial scale to make it smaller */
-    transition: transform 0.5s; /* Add a longer transition time for a slower effect */
-  }
-
-  /* Style for the image when zoomed-in on hover */
-  .image-container:hover img {
-    transform: scale(1.05); /* Zoom in on hover */
-  }
-</style>
-
-To arrange the projects in alternating left-right order and make the image link to the same URL as the project title, we need to swap the positions of the image container and project title link in the HTML code. Here's the updated code:
-
-```html
 <style>
   /* Style for the container holding the columns */
   .columns-container {
@@ -86,13 +51,13 @@ To arrange the projects in alternating left-right order and make the image link 
 
   /* Style for the image when zoomed */
   .image-container img {
-    transform: scale(0.9); /* Set an initial scale to make it smaller */
+    transform: scale(0.95); /* Set an initial scale to make it smaller */
     transition: transform 0.5s; /* Add a longer transition time for a slower effect */
   }
 
   /* Style for the image when zoomed-in on hover */
   .image-container:hover img {
-    transform: scale(1.1); /* Zoom in on hover */
+    transform: scale(1.05); /* Zoom in on hover */
   }
 </style>
 
@@ -162,6 +127,28 @@ To arrange the projects in alternating left-right order and make the image link 
         <center>
           <time>
             <font color="9f9f9c">July 5, 2023</font>
+          </time>
+        </center>
+      </div>
+    </div>
+
+          <!-- Project 3 -->
+      <div class="project-container">
+        <div class="image-container">
+          <center>
+            <a href="/project/formation/index.html">
+              <img id="img3" src="/project/formation/formation.jpg" style="width: 400px; height: 360px;" />
+            </a>
+          </center>
+        </div>
+        <a style="text-decoration: none" href="/project/formation/index.html">
+          <h4 style="text-align: center; margin-bottom: 0; margin-top: 0">
+            Fixed-time Distributed Formation of Multi-WMRs - submitted to TIMC
+          </h4>
+        </a>
+        <center>
+          <time>
+            <font color="9f9f9c">July 1, 2023</font>
           </time>
         </center>
       </div>
